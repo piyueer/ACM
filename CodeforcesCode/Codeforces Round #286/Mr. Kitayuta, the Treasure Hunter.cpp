@@ -26,11 +26,11 @@ int main()
 				if(t > 1 && i + t - 1 < MAX)
 					dp[i + t - 1][j - 1] = max(dp[i + t - 1][j - 1], dp[i][j] + gem[i + t - 1]);
 				if(i + t < MAX)
-                    dp[i + t][j] = max(dp[i + t][j], dp[i][j] + gem[i + t]);
-                if(i + t + 1< MAX)
-                    dp[i + t + 1][j + 1] = max(dp[i + t + 1][j + 1], dp[i][j] + gem[i + t + 1]);
-                ans = max(ans , dp[i][j]);
-            }
+					dp[i + t][j] = max(dp[i + t][j], dp[i][j] + gem[i + t]);
+				if(i + t + 1 < MAX)
+					dp[i + t + 1][j + 1] = max(dp[i + t + 1][j + 1], dp[i][j] + gem[i + t + 1]);
+				ans = max(ans , dp[i][j]);
+			}
 		}
 		printf("%d\n", ans);
 	}
